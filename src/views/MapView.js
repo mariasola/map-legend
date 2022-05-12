@@ -8,15 +8,26 @@ import getLegendData from '../services/index';
 import MapContainer from '../containers/MapContainer';
 
 const MapView = () => {
-  const [legendData, setLegendData] = useState([]);
+  const [legendData, setLegendData] = useState(null);
+
   useEffect(() => {
-    getLegendData().then(legendData => {
-      setLegendData(legendData);
-    });
+    getLegendData()
+      .then(legendData => {
+        const groupByType = legendData.reduce((group, dataSet) => {
+          const { type } = dataSet;
+          return {
+            ...group,
+            [type]: dataSet
+          };
+        }, {})
+        setLegendData(groupByType)
+      })
   }, []);
 
   return (
-    <MapContainer legendData={legendData} />
+    legendData && (
+      <MapContainer legendData={legendData} />
+    )
   );
 }
 

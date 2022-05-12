@@ -1,5 +1,14 @@
+import Basic from './Basic';
+import Choropleth from './Choropleth';
+import Gradient from './Gradient';
+import Timeline from './Timeline';
 import Toolbar from './Toolbar';
 
+
 export {
-  Toolbar
+  Basic,
+  Choropleth,
+  Gradient,
+  Timeline,
+  Toolbar,
 };

@@ -9,6 +9,8 @@ export const SCREEN_XXL = 1600;
 
 const mapTheme = {
   mainColor: '#393F44',
+  subtitleColor: '#6B6B6B',
+  axiscolor: '#4C4C4C',
   probabilitiesMainColor: '#41484E',
   probabilitiesSecondaryColor: '#3A3A3A',
   accessibilitiyMainColor: '#4A5258',

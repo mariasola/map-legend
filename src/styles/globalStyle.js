@@ -11,16 +11,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color: #FFFFFF !important;
+    background-color: #3A3A3A !important;
     font-size: 15px !important;
-    /* -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: auto !important;
-    [class^="ant-"],
-    label {
-      color: black;
-      font-size: 15px;
-      line-height: 25px;
-    } */
+    .App {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
   }
 
 `;

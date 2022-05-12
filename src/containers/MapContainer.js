@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Services
-
-
 // Components
-import LegendComponent from '../components/LegendComponent';
+import { LegendComponent } from '../components';
 
 
 const MapContainer = props => {
@@ -13,7 +10,6 @@ const MapContainer = props => {
     legendData,
   } = props;
 
-  console.log('legendData', legendData);
   return (
     <LegendComponent legendData={legendData} />
   );

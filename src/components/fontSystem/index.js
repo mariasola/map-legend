@@ -44,7 +44,7 @@ const H2 = styled.h2`
   color: ${props => props.color || props.theme.mainColor};
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: ${props => props.mb || 0};
+  margin-bottom: ${props => props.mb || '0 !important'};
   ${commonStyle}
 
   ${props => props.tacenter && css`
@@ -68,12 +68,9 @@ const P = styled.p`
   ${commonStyle}
 
   color: ${props => props.color || props.theme.protestSecondaryColor};
-  font-size: 15px;
+  font-size: 12px;
+  line-height: 15px;
   font-style:  ${props => props.em && 'italic'};
-
-  ${props => props.primary && css`
-    color: ${props.theme.primaryColor};
-  `}
 
   ${props => props.tacenter && css`
     text-align: center;
@@ -86,18 +83,20 @@ const P = styled.p`
   ${props => props.mb0 && css`
     margin-bottom: 0;
   `}
+`;
 
-  ${({ help }) => help && css`
-    color: #37CC82;
-    font-size: ${props => props.size || '12px'};
-    font-style: italic;
-    line-height: 20px;
-    margin-bottom: ${props => props.mb || '0px'};
-  `}
+const Link = styled.a`
+  ${commonStyle}
+
+  color: ${props => props.color || props.theme.linkColor};
+  font-size: 12px;
+  line-height: 15px;
 `;
 
 const Span = styled.span`
   color: ${props => props.color || props.theme.protestSecondaryColor};
+  font-size: 12px;
+  line-height: 15px;
   ${({ wrapText }) => wrapText && css`
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -117,5 +116,6 @@ export {
   H3,
   P,
   semiBoldStyle,
+  Link,
   Span,
 };
