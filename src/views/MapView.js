@@ -7,7 +7,9 @@ import getLegendData from '../services/index';
 // Components
 import MapContainer from '../containers/MapContainer';
 
-const MapView = () => {
+const MapView = props => {
+  const { items, getIndex } = props;
+
   const [legendData, setLegendData] = useState(null);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const MapView = () => {
 
   return (
     legendData && (
-      <MapContainer legendData={legendData} />
+      <MapContainer legendData={legendData} items={items} getIndex={getIndex} />
     )
   );
 }

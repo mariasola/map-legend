@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Draggable } from 'react-beautiful-dnd';
 
 // Utils
 import { SCREEN_SM } from '../../styles/map-theme'
@@ -18,7 +19,7 @@ import { ReactComponent as dragDots } from '../../assets/drag-dots.svg';
 const { Panel } = Collapse;
 
 const Toolbar = props => {
-  const { id, title, description, infoDescription } = props;
+  const { index, id, title, description, infoDescription } = props;
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isLayerVisible, setIsLayerVisible] = useState(false);
 
@@ -58,19 +59,29 @@ const Toolbar = props => {
 
   return (
     <>
-      <StyledCollapse
-        bordered={false}
-        expandIcon={({ isActive }) => <Icon component={arrowDown} rotate={!isActive ? -180 : 0} />}
-        expandIconPosition="right"
-      >
-        <Panel
-          header={getHeader()}
-          extra={getExtraIcons()}
-          key={id}
-        >
-          {description}
-        </Panel>
-      </StyledCollapse>
+      <Draggable draggableId={String(id)} index={index} key={id}>
+        {(provided) => (
+          <div
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+          >
+            <StyledCollapse
+              bordered={false}
+              expandIcon={({ isActive }) => <Icon component={arrowDown} rotate={!isActive ? -180 : 0} />}
+              expandIconPosition="right"
+            >
+              <Panel
+                header={getHeader()}
+                extra={getExtraIcons()}
+                key={id}
+              >
+                {description}
+              </Panel>
+            </StyledCollapse>
+          </div>
+        )}
+      </Draggable>
       <StyledModal visible={isModalVisible} onCancel={handleModalClick} footer={null}>
         <P dangerouslySetInnerHTML={{ __html: infoDescription }} />
       </StyledModal>
@@ -107,7 +118,7 @@ const StyledModal = styled(Modal)`
 Toolbar.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.instanceOf(Object).isRequired,
   infoDescription: PropTypes.string.isRequired,
 };
 
