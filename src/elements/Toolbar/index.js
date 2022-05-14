@@ -107,7 +107,7 @@ const StyledModal = styled(Modal)`
 Toolbar.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.instanceOf(Object),
   infoDescription: PropTypes.string.isRequired,
 };
 

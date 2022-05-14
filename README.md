@@ -28,6 +28,7 @@ Finally I have made a small service doc to mock error handling.
 As said before, scalability was the base of my thinking in this project. That is why I created:
 - **GlobalStyle:** this would style the basics as background of the app, fonts, etc.
 - **Themes & map-theme:** this is just to be sure that if, for example, the main color of the page changes, we only have to change it in one place.
+- **FontSystem:** that has styled all the basic HTML elements (P, Span, H1, H2, H3) to give consistence to the app.
 
 For the rest I used Ant Design for the components, and styled-components to make them look as the mockups. 
 

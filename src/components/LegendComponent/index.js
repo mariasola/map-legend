@@ -22,7 +22,7 @@ const LegendComponent = props => {
         subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, metus ut 
         sagittis aliquam, arcu nibh ornare quam, eu molestie eros tellus at leo.'
         gradientColors={gradientData.items}
-        link='https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json'
+        link='https://www.pnas.org/doi/10.1073/pnas.1211658109'
         infoDescription={gradientData.description}
       />
       <Choropleth

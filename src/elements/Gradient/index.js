@@ -43,7 +43,7 @@ const Gradient = props => {
           <P color={mapTheme.axiscolor}>{strokeTexts[1].name}</P>
         </div>
         <P color={mapTheme.subtitleColor}>{subtitle}</P>
-        <Link href={link}>
+        <Link href={link} target="_blank">
           Check the data
         </Link>
       </Wrapper>

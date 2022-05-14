@@ -51,4 +51,8 @@ const StyledLi = styled.li`
   }
 `;
 
+Basic.propTypes = {
+  basicItems: PropTypes.instanceOf(Array).isRequired,
+};
+
 export default Basic;
