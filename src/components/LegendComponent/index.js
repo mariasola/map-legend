@@ -27,35 +27,40 @@ const LegendComponent = props => {
   //   }
   //   return isItemPresent.index
   // }
+  const updateChange = React.useCallback(id => {
+    setIndexChange(true)
+    window.setTimeout(() => setIndexChange(false), 1);
+    return getIndex(id)
+  }, [getIndex]);
 
   return items && (
     <Wrapper>
       <Gradient
-        index={(items > 0) ? () => getIndex(gradientData.id) : 1}
+        index={(items > 0) ? updateChange(gradientData.id) : 1}
         id={gradientData.id}
         title={gradientData.name}
         subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, metus ut 
         sagittis aliquam, arcu nibh ornare quam, eu molestie eros tellus at leo.'
         gradientColors={gradientData.items}
-        link='https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json'
+        link='https://www.pnas.org/doi/10.1073/pnas.1211658109'
         infoDescription={gradientData.description}
       />
       <Choropleth
-        index={(items > 0) ? getIndex(choroplethData.id) : 2}
+        index={(items > 0) ? updateChange(choroplethData.id) : 2}
         id={choroplethData.id}
         title={choroplethData.name}
         colorItems={choroplethData.items}
         infoDescription={choroplethData.description}
       />
       <Basic
-        index={(items > 0) ? getIndex(basicData.id) : 3}
+        index={(items > 0) ? updateChange(basicData.id) : 3}
         id={basicData.id}
         title={basicData.name}
         basicItems={basicData.items}
         infoDescription={basicData.description}
       />
       <Timeline
-        index={(items > 0) ? getIndex(timelineData.id) : 4}
+        index={(items > 0) ? updateChange(timelineData.id) : 4}
         id={timelineData.id}
         title={timelineData.name}
         timeline={timelineData.timeline}
