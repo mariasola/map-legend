@@ -18,9 +18,9 @@ As you can see in the Miro, I have made some decisions **thinking of this as a s
 - **View** - all the logic.
 - **Container** - that would have the menus/layouts + components
 - **Components** - call all the elements and manage the logic that does not need to be in the view.
-- Elements - they recieve props and style the elements to make them reusable. 
+- **Elements** - they recieve props and style the elements to make them reusable. 
 
-Regarding the data, the view is the one doing **all the calls to the API and formatting the data** to pass it though cascading until the elements. This has two main advantages: first is that whenever we want to change iformation we do it only in one place or if anytime anything changes in the texts we know that the view will handle it, and second that elements are completely dumb - they only know that a prop will come and they need to paint it. This is good because it makes them very reusable, and as in every application, for sure we will have to put them somewhere else where we don't know if they will recieve the same info. 
+Regarding the data, the view is the one doing **all the calls to the API and formatting the data** to pass it though cascading until the elements. This has two main advantages: first is that whenever we want to **change information we do it only in one place** or if anytime anything changes in the texts we know that the view will handle it, and second that elements are completely dumb - they only know that a prop will come and they need to paint it. This is good because it makes them **very reusable**, and as in every application, for sure we will have to put them somewhere else where we don't know if they will recieve the same info. 
 
 Finally I have made a small service doc to mock error handling. 
 # 🎨 Styles
