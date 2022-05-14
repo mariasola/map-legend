@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/map-legend/static/css/main.08912ab6.css",
+    "main.js": "/map-legend/static/js/main.2be40e22.js",
+    "index.html": "/map-legend/index.html",
+    "static/media/show.svg": "/map-legend/static/media/show.222b00765b83495143bc5e9f0255f9a9.svg",
+    "static/media/drag-dots.svg": "/map-legend/static/media/drag-dots.cc4eb6cba10c1e61d5371007aa37f94e.svg",
+    "static/media/info.svg": "/map-legend/static/media/info.c491fdbc226bd8819bd0aa6fa0b39b5d.svg",
+    "static/media/arrow-down.svg": "/map-legend/static/media/arrow-down.f52426b7264f269571c394e5ca8ae614.svg",
+    "main.08912ab6.css.map": "/map-legend/static/css/main.08912ab6.css.map",
+    "main.2be40e22.js.map": "/map-legend/static/js/main.2be40e22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08912ab6.css",
+    "static/js/main.2be40e22.js"
+  ]
+}
