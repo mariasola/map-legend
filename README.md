@@ -36,7 +36,7 @@ For the rest I used Ant Design for the components, and styled-components to make
 
 I really enjoyed creating something from scratch & thinking about how to organise it and make it readable and easy to maintain.
 
-My **biggest challenge** has been the drag and drop, that I have left in a branch called `drag-and-drop` unfinalised, with only pending a re-render of the Collapsibles to work. To be transparent with you, I really think that this **would have not been a challenge in other situation**, but as I am working and in the midst of the develop of a new functionality that I am the owner of, has been **really difficult** to code for my actual job for 8 hours and then dedicate my brain to this challenge during another 2 or 3 a day. 
+My **biggest challenge** has been the drag and drop, that I have left in a branch called `drag-and-drop` unfinalised, with only pending a re-render of the Collapsibles to work. To be transparent with you, I really think that this **would have not been a challenge in other situation**, but I was really tired after all the work done in my actual job and then dedicating to this completely. 
 
 I **don't want it to sound as an excuse or either as I am not interested enough**, I just want to be clear about my situation and the why's behind the challenges I have faced. 
 
